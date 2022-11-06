@@ -29,7 +29,7 @@ class Globalvars
         loadingbars = 1
     end
 
-    # time to check if the loadbar method has gone off before we exit
+    # method to check if the loading bars are properly loaded
     def loadbars_check
         if loadingbars = 1
             then puts "Loading bars loaded!"

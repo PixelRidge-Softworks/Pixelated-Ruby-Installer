@@ -5,6 +5,7 @@ class Gitclone
     attr_reader :giturl, :destpa
 
     # init class method to set instance variables for giturl and destination path
+    # Gitclone.new(https://github.com/vetheon/someshit.git, /home/vetheon)
     def initialize(giturl, destpa)
         @giturl = giturl
         @destpa = destpa
@@ -13,7 +14,6 @@ class Gitclone
     # class method to create directories and clone git repositories
     def self.clone
         puts "Creating directories!"
-        sleep(2)
         21.times {
             print "-"
         }
@@ -35,7 +35,9 @@ class Gitclone
         Git.clone(@giturl, path: @destpa)
 
         # notify the user if the repository was cloned successfuly
-        if Dir.exist?(/etc/pixelated/ruby/bin/)
-            then puts ""
+        if Dir.exist?(/etc/pixelated/ruby/bin)
+            then puts "Successfully Cloned the Repo!"
+        else
+        end
     end
 end
