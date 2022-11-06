@@ -28,21 +28,28 @@ puts ""
 
 $softtype = gets.chomp
 
+softtype = $softtype
+puts ""
+
 sleep(2)
 
-puts "Ok! We will install $softtype for you!"
+puts "Ok! We will install #{softtype} for you!"
+puts ""
 
 sleep(2)
 
 require("./classes/Gitclone.rb")
 
-if $softtype = "Pixelated-Backup"
-    then Gitclone.initialize(https://github.com/Pixelated-Studios/Pixelated-Backup.git, /etc/pixelated/ruby/bin)
-    then Gitclone.clone
+    if $softtype == "Pixelated-Backup"
+        then 
+            giturl = "https://github.com/Pixelated-Studios/Pixelated-Backup.git"
+            destpa = "/etc/pixelated/ruby/bin"
+            Gitclone.new(giturl, destpa)
+            Gitclone.clone
     # commented out for future use
     # elsif
-else
-end
+        else
+            puts "ERROR! Git clone failed!"
+    end
 
 sleep(1)
-end
