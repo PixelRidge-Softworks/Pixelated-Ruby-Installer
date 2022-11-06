@@ -30,14 +30,19 @@ $softtype = gets.chomp
 
 sleep(2)
 
-puts "Ok! We will install #{softtype} for you!"
+puts "Ok! We will install $softtype for you!"
 
 sleep(2)
 
 require("./classes/Gitclone.rb")
 
 if $softtype = "Pixelated-Backup"
-    then Gitclone.initialize(https://github.com/Pixelated-Studios/Pixelated-Backup.git, /etc/pixelated/bin/Pixelated-Backup)
+    then Gitclone.initialize(https://github.com/Pixelated-Studios/Pixelated-Backup.git, /etc/pixelated/ruby/bin)
     then Gitclone.clone
+    # commented out for future use
+    # elsif
+else
+end
 
 sleep(1)
+end
