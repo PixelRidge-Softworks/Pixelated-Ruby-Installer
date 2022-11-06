@@ -3,9 +3,8 @@
 
 # start class for global vars we will need throughout the program
 class Globalvars
-  attr_reader :loadingbar1, :loadingbar2, :loadingbar3, :loadingbar4
 
-  # start method to
+  # start init method
   def initialize
     puts 'Loading global variables now!'
     # set instance variables for checking whether or not the global variables are set to 0 as they are currently not set
@@ -18,8 +17,6 @@ class Globalvars
   # initialize the loadbars global variables
   def init_loadbars
     # setting up global vars for loading bars
-    puts 'Loading the loading bars!'
-
     $loadingbar1 = '###          25% '
 
     $loadingbar2 = '######       50% '
@@ -36,7 +33,6 @@ class Globalvars
     loop do
       sleep(1)
       if @loadingbars
-        puts 'Loading Bars Loaded!'
         break
       end
     end
