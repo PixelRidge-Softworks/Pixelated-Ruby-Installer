@@ -1,55 +1,51 @@
 #!/bin/ruby
+# frozen_string_literal: true
 
-require "ruby_figlet"
-require "rubygems"
-require "git"
-require("./vars/globalvars.rb")
-require "fileutils"
+require 'rubygems'
+require 'ruby_figlet'
+require 'git'
+require('./vars/Globalvars')
+require 'fileutils'
 
-puts RubyFiglet::Figlet.new("Pixelated Installer").to_s
+puts RubyFiglet::Figlet.new('Pixelated Installer').to_s
 
-108.times {
-    print "~"
-}
-puts " "
-
-sleep(2)
-
-puts "Starting the Pixelated Installer now!"
+108.times { print '~' }
+puts '\n'
 
 sleep(2)
 
-puts "What are you trying to install?"
+puts 'Starting the Pixelated Installer now!'
 
-31.times {
-    print "-"
-}
-puts ""
+sleep(2)
+
+puts 'What are you trying to install?'
+
+31.times {print '-' }
+puts '\n'
 
 $softtype = gets.chomp
 
 softtype = $softtype
-puts ""
+puts '\n'
 
 sleep(2)
 
 puts "Ok! We will install #{softtype} for you!"
-puts ""
+puts '\n'
 
 sleep(2)
 
-require("./classes/Gitclone.rb")
+require('./classes/Gitclone')
 
-    if $softtype == "Pixelated-Backup"
-        then 
-            giturl = "https://github.com/Pixelated-Studios/Pixelated-Backup.git"
-            destpa = "/etc/pixelated/ruby/bin"
-            Gitclone.new(giturl, destpa)
-            Gitclone.clone
-    # commented out for future use
-    # elsif
-        else
-            puts "ERROR! Git clone failed!"
-    end
+if $softtype == 'Pixelated-Backup'
+  giturl = 'https://github.com/Pixelated-Studios/Pixelated-Backup.git'
+  destpa = '/etc/pixelated/ruby/bin'
+  Gitclone.new(giturl, destpa)
+  Gitclone.clone
+# commented out for future use
+# elsif
+else
+  puts 'ERROR! Git clone failed!'
+end
 
 sleep(1)
