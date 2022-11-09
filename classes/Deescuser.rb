@@ -1,3 +1,8 @@
+#!/bin/ruby
+
+class Deescuser
+  def initialize
+
 #
 # # this code was imported from a user on StackOverflow as a method to de-escalate user permissions to non-root
 # # when running certain parts of the script
@@ -50,5 +55,6 @@
   puts 'Doing stuff as a user'
   sleep 1
  end
-
+  end
+  end
 ### END UNUSED CODE ###
