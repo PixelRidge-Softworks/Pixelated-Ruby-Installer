@@ -9,8 +9,8 @@ class Makedirectories
     puts $new_line
 
     sleep(2)
-    FileUtils.mkdir_p '/usr/local/pixelated/ruby/bin'
-    puts 'We have created the /usr/local/pixelated/ruby/bin directory!'
+    FileUtils.mkdir_p '/etc/pixelated/ruby/bin'
+    puts 'We have created the /etc/pixelated/ruby/bin directory!'
 
     54.times {print '-' }
     puts $new_line
