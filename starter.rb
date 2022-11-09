@@ -98,12 +98,27 @@ puts 'What are you trying to install?'
 puts '-' * 31
 puts
 
-$softtype = gets.chomp
+options = {
+  '1' => 'Pixelated-Backup'
+}
+puts "#{options.keys} : #{options.values}"
+softtype = nil
+loop do
+  print "Enter option: "
+  input = gets.chomp
 
-softtype = $softtype
-puts
+  softtype = options[input]
+  break if softtype
+end
 
-sleep(2)
+puts "You selected option #{softtype}"
+$softtype = softtype
+#$softtype = gets.chomp
+
+#softtype = $softtype
+#puts
+
+#sleep(2)
 
 puts "Ok! We will install #{softtype} for you!"
 puts
