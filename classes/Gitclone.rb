@@ -24,7 +24,7 @@ class Gitclone
     # the '@giturl' instance variable to the path stored in the '@destpa' instance variable
     return unless $softtype == 'Pixelated-Backup'
 
-    Git.clone("https://github.com/Pixelated-Studios/Pixelated-Backup.git")
+    Git.clone('https://github.com/Pixelated-Studios/Pixelated-Backup.git', '/etc/pixelated/ruby/bin')
 
   end
 
@@ -34,7 +34,7 @@ class Gitclone
       puts "Successfully Cloned the Repo for #{softtype}!"
       puts
     else
-      puts "ERROR! Repo was not cloned! Did you give us the right link?"
+      puts 'ERROR! Repo was not cloned! Did you give us the right link?'
       puts
     end
     puts
