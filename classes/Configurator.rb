@@ -3,6 +3,7 @@
 
 # this is the class that will configure the software for us
 # it's currently unused and unfinished
+# ignore this class for now
 class Configurator
   puts 'Launching the configurator now!'
   if $softtype == 'Pixelated-Backup'
