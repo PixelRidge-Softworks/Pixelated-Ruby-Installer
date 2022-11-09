@@ -17,9 +17,7 @@ class Gitclone
   # class method to clone git repositories
   def clone
     puts 'Cloning the requested Git Repository now!'
-    41.times do
-      print '-'
-    end
+    puts '-' * 41
     puts $new_line
     sleep(2)
     # this bit here simply uses the Git gem to clone the repository URL stored in

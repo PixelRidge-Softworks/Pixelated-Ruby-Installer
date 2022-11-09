@@ -10,7 +10,7 @@ require 'io/console'
 
 puts RubyFiglet::Figlet.new('Pixelated Installer').to_s
 
-108.times { print '~' }
+puts '~' * 108
 puts $new_line
 
 sleep(2)
@@ -93,7 +93,7 @@ sleep(2)
 
 puts 'What are you trying to install?'
 
-31.times {print '-' }
+puts '-' * 31
 puts $new_line
 
 $softtype = gets.chomp
