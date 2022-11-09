@@ -7,6 +7,8 @@ require 'ruby_figlet'
 require('./vars/Globalvars')
 require 'fileutils'
 require 'io/console'
+require('./classes/Gitclone')
+require('./classes/Makedirectories')
 
 puts RubyFiglet::Figlet.new('Pixelated Installer').to_s
 
@@ -107,9 +109,6 @@ puts "Ok! We will install #{softtype} for you!"
 puts
 
 sleep(2)
-
-require('./classes/Gitclone')
-require('./classes/Makedirectories')
 
 Makedirectories.new
 

@@ -23,9 +23,13 @@ class Gitclone
     # this bit here simply uses the Git gem to clone the repository URL stored in
     # the '@giturl' instance variable to the path stored in the '@destpa' instance variable
     #return unless $softtype == 'Pixelated-Backup'
-
+    puts
+    puts
+    puts
     Git.clone('https://github.com/Pixelated-Studios/Pixelated-Backup.git', '/etc/pixelated/ruby/bin')
-
+    puts
+    puts
+    puts
   end
 
   # notify the user if the repository was cloned successfully
