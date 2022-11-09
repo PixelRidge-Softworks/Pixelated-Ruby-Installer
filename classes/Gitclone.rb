@@ -3,7 +3,6 @@
 
 # class ID declaration for the gitclone class
 class Gitclone
-  require 'rubygems'
   require 'git'
   # attribute reader so other classes/methods can read the instance vars in this class
   attr_reader :giturl, :destpa
