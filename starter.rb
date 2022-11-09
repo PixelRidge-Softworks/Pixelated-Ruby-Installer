@@ -3,6 +3,7 @@
 
 require 'rubygems'
 require 'git'
+require 'ruby_figlet'
 require('./vars/Globalvars')
 require 'fileutils'
 require 'io/console'
@@ -117,7 +118,7 @@ if $softtype == 'Pixelated-Backup'
   destpa = '/usr/pixelated/ruby/bin'
   Gitclone.new(giturl, destpa)
   Gitclone.clone
-  Gitclone.gitcheck
+  #  Gitclone.gitcheck
 # commented out for future use
 # elsif
 else
