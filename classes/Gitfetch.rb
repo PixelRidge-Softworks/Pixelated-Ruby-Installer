@@ -1,4 +1,5 @@
-#/bin/ruby
+#!/bin/ruby
+# frozen_string_literal: true
 
 require 'rubygems'
 require 'git'
