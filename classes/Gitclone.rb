@@ -22,7 +22,7 @@ class Gitclone
     sleep(2)
     # this bit here simply uses the Git gem to clone the repository URL stored in
     # the '@giturl' instance variable to the path stored in the '@destpa' instance variable
-    return unless $softtype == 'Pixelated-Backup'
+    #return unless $softtype == 'Pixelated-Backup'
 
     Git.clone('https://github.com/Pixelated-Studios/Pixelated-Backup.git', '/etc/pixelated/ruby/bin')
 
