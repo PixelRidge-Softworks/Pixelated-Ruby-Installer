@@ -33,7 +33,7 @@ class Gitclone
     # notify the user if the repository was cloned successfully
   end
 
-  def gitclone_check
+  def gitcheck
     if Dir.exist?("/usr/local/pixelated/ruby/bin/#{$softtype}")
       puts "Successfully Cloned the Repo for #{softtype}!#{$new_line}"
     else
