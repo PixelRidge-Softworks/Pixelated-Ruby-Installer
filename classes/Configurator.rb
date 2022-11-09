@@ -2,6 +2,7 @@
 # frozen_string_literal: true
 
 # this is the class that will configure the software for us
+# it's currently unused and unfinished
 class Configurator
   puts 'Launching the configurator now!'
   if $softtype == 'Pixelated-Backup'
