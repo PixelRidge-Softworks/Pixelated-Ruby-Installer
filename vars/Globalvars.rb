@@ -9,7 +9,6 @@ class Globalvars
     puts 'Loading global variables now!'
     # set instance variables for checking whether or not the global variables are set to 0 as they are currently not set
     @loadingbars = '0'
-    $new_line = "\n"
     # wait after setting variables to ensure they are properly loaded in case of strange hangs
     sleep(2)
   end

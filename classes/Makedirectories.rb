@@ -12,7 +12,7 @@ class Makedirectories
     puts 'We have created the /etc/pixelated/ruby/bin directory!'
 
     puts '-' * 54
-    puts $new_line
+    puts
     sleep(2)
   end
 end

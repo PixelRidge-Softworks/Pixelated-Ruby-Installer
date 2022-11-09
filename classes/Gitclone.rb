@@ -18,7 +18,7 @@ class Gitclone
   def clone
     puts 'Cloning the requested Git Repository now!'
     puts '-' * 41
-    puts $new_line
+    puts
     sleep(2)
     # this bit here simply uses the Git gem to clone the repository URL stored in
     # the '@giturl' instance variable to the path stored in the '@destpa' instance variable
@@ -31,10 +31,12 @@ class Gitclone
   # notify the user if the repository was cloned successfully
   def gitcheck
     if Dir.exist?("/usr/local/pixelated/ruby/bin/#{$softtype}")
-      puts "Successfully Cloned the Repo for #{softtype}!#{$new_line}"
+      puts "Successfully Cloned the Repo for #{softtype}!"
+      puts
     else
-      puts "ERROR! Repo was not cloned! Did you give us the right link?#{$new_line}"
+      puts "ERROR! Repo was not cloned! Did you give us the right link?"
+      puts
     end
-    puts $new_line
+    puts
   end
 end
