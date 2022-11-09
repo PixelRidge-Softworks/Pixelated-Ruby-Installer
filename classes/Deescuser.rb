@@ -1,18 +1,10 @@
 #!/bin/ruby
 
+# this class will de-escalate an action from Root to Non-root and back again
+# this class is currently unused. It's just here for future use
 class Deescuser
   def initialize
 
-#
-# # this code was imported from a user on StackOverflow as a method to de-escalate user permissions to non-root
-# # when running certain parts of the script
-# #
-# # This way a user can run the program as SUDO and we can make everything we don't need root for
-# # run as a regular user instead of root
-# #
-# # I know this method works, I just don't know how to use it yet.
-#
-### BEING UNUSED CODE ###
  logname = User.find(session[:user_id]).name
  uname = logname.strip uid = Integer(id -u '#{uname}'.strip)
  gid = Integer(id -g "#{uname}".strip)
@@ -57,4 +49,4 @@ class Deescuser
  end
   end
   end
-### END UNUSED CODE ###
+
