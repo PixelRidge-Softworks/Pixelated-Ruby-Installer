@@ -15,7 +15,7 @@ class Gitclone
   end
 
   # class method to clone git repositories
-  def clone
+  def self.clone
     puts 'Cloning the requested Git Repository now!'
     puts '-' * 41
     puts
@@ -26,19 +26,19 @@ class Gitclone
     puts
     puts
     puts
-    Git.clone('https://github.com/Pixelated-Studios/Pixelated-Backup.git', '/etc/pixelated/ruby/bin')
+    Git.clone('https://github.com/Pixelated-Studios/Pixelated-Backup.git', '/etc/pixelated/ruby/bin/Pixelated-Backup')
     puts
     puts
     puts
   end
 
   # notify the user if the repository was cloned successfully
-  def check
-    if Dir.exist?("/usr/local/pixelated/ruby/bin/#{$softtype}")
-      puts "Successfully Cloned the Repo for #{softtype}!"
+  def self.check
+    if Dir.exist?("/etc/pixelated/ruby/bin/#{$softtype}")
+      puts "Successfully Cloned the Repo for #{$softtype}!"
       puts
     else
-      puts 'ERROR! Repo was not cloned! Did you give us the right link?'
+      puts 'ERROR! Repo was not cloned!'
       puts
     end
     puts

@@ -117,7 +117,7 @@ if softtype == 'Pixelated-Backup'
   destpa = '/usr/pixelated/ruby/bin'
   Gitclone.new(giturl, destpa)
   Gitclone.clone
-  #Gitclone.check
+  Gitclone.check
 # commented out for future use
 # elsif
 else

@@ -8,8 +8,8 @@ class Makedirectories
     puts '-' * 21
 
     sleep(2)
-    FileUtils.mkdir_p '/etc/pixelated/ruby/bin'
-    puts 'We have created the /etc/pixelated/ruby/bin directory!'
+    FileUtils.mkdir_p "/etc/pixelated/ruby/bin/#{$softtype}"
+    puts "We have created the /etc/pixelated/ruby/bin/#{$softtype} directory!"
 
     puts '-' * 54
     puts
