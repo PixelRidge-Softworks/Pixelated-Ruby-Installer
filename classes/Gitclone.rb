@@ -22,7 +22,7 @@ class Gitclone
     sleep(2)
     # this bit here simply uses the Git gem to clone the repository URL stored in
     # the '@giturl' instance variable to the path stored in the '@destpa' instance variable
-    #return unless $softtype == 'Pixelated-Backup'
+    # return unless $softtype == 'Pixelated-Backup'
     puts
     puts
     puts
@@ -33,7 +33,7 @@ class Gitclone
   end
 
   # notify the user if the repository was cloned successfully
-  def gitcheck
+  def check
     if Dir.exist?("/usr/local/pixelated/ruby/bin/#{$softtype}")
       puts "Successfully Cloned the Repo for #{softtype}!"
       puts

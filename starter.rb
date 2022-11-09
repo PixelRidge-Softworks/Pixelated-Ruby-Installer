@@ -112,12 +112,12 @@ sleep(2)
 
 Makedirectories.new
 
-if $softtype == 'Pixelated-Backup'
+if softtype == 'Pixelated-Backup'
   giturl = 'https://github.com/Pixelated-Studios/Pixelated-Backup.git'
   destpa = '/usr/pixelated/ruby/bin'
   Gitclone.new(giturl, destpa)
   Gitclone.clone
-  #  Gitclone.gitcheck
+  Gitclone.check
 # commented out for future use
 # elsif
 else
