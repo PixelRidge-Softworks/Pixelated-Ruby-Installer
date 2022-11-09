@@ -9,15 +9,12 @@ require 'fileutils'
 require 'io/console'
 require('./classes/Gitclone')
 require('./classes/Makedirectories')
+require('./classes/Gitfetch')
 
-puts RubyFiglet::Figlet.new('Pixelated Installer').to_s
+two_lines = RubyFiglet::Figlet.new("Pixelated\nInstaller")
+two_lines.show
 
-puts '~' * 108
-puts
-
-sleep(2)
-
-puts 'Starting the Pixelated Installer now!'
+puts '~' * 50
 
 sleep(2)
 
@@ -96,7 +93,6 @@ sleep(2)
 puts 'What are you trying to install?'
 
 puts '-' * 31
-puts
 
 options = {
   '1' => 'Pixelated-Backup'
@@ -104,7 +100,7 @@ options = {
 puts "#{options.keys} : #{options.values}"
 softtype = nil
 loop do
-  print "Enter option: "
+  print 'Enter option: '
   input = gets.chomp
 
   softtype = options[input]
@@ -113,12 +109,6 @@ end
 
 puts "You selected option #{softtype}"
 $softtype = softtype
-#$softtype = gets.chomp
-
-#softtype = $softtype
-#puts
-
-#sleep(2)
 
 puts "Ok! We will install #{softtype} for you!"
 puts
@@ -127,14 +117,19 @@ sleep(2)
 
 Makedirectories.new
 
-if softtype == 'Pixelated-Backup'
+case $dirsreal
+when 0
   giturl = 'https://github.com/Pixelated-Studios/Pixelated-Backup.git'
   destpa = '/usr/pixelated/ruby/bin'
   Gitclone.new(giturl, destpa)
   Gitclone.clone
   Gitclone.check
 # commented out for future use
-# elsif
+when 1
+
+  puts 'Updated Successfully!'
+  puts 'Exiting now!'
+
 else
   puts 'ERROR! Git clone failed!'
 end
