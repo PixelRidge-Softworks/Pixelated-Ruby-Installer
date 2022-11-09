@@ -12,6 +12,8 @@ class Gitclone
   def initialize(giturl, destpa)
     @giturl = giturl
     @destpa = destpa
+    $giturl = giturl
+    $destpa = destpa
   end
 
   # class method to clone git repositories
@@ -20,10 +22,11 @@ class Gitclone
     puts '-' * 41
     puts
     sleep(2)
+    g = Git.open("/etc/pixelated/ruby/bin/#{$softtype}")
     # this bit here simply uses the Git gem to clone the repository URL stored in
     # the '@giturl' instance variable to the path stored in the '@destpa' instance variable
     # return unless $softtype == 'Pixelated-Backup'
-    Git.clone('https://github.com/Pixelated-Studios/Pixelated-Backup.git', '/etc/pixelated/ruby/bin/Pixelated-Backup')
+    g.clone
   end
 
   # notify the user if the repository was cloned successfully
