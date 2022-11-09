@@ -26,7 +26,7 @@ class Gitclone
     # the '@giturl' instance variable to the path stored in the '@destpa' instance variable
     return unless $softtype == 'Pixelated-Backup'
 
-    Git.clone("https://github.com/Pixelated-Studios/Pixelated-Backup.git", path: "/etc/pixelated/ruby/bin")
+    Git.clone("https://github.com/Pixelated-Studios/Pixelated-Backup.git")
 
   end
 
