@@ -1,15 +1,14 @@
 #!/bin/ruby
 # frozen_string_literal: true
 
-require 'rubygems'
 require 'git'
 require 'ruby_figlet'
-require('./vars/Globalvars')
+require_relative './vars/Globalvars'
 require 'fileutils'
 require 'io/console'
-require('./classes/Gitclone')
-require('./classes/Makedirectories')
-require('./classes/Gitfetch')
+require_relative './classes/Gitclone'
+require_relative './classes/Makedirectories'
+require_relative './classes/Gitfetch'
 
 two_lines = RubyFiglet::Figlet.new("Pixelated\nInstaller")
 two_lines.show
