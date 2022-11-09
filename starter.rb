@@ -47,7 +47,7 @@ Makedirectories.new
 
 case $dirsreal
 when 0
-  giturl = 'https://github.com/Pixelated-Studios/Pixelated-Backup.git'
+  giturl = "https://github.com/Pixelated-Studios/#{$softtype}.git"
   destpa = '/usr/pixelated/ruby/bin'
   Gitclone.new(giturl, destpa)
   Gitclone.clone
