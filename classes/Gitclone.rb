@@ -27,12 +27,11 @@ class Gitclone
     # the '@giturl' instance variable to the path stored in the '@destpa' instance variable
     return unless $softtype == 'Pixelated-Backup'
 
-    Gitclone('https://github.com/Pixelated-Studios/Pixelated-Backup.git', path: '/usr/local/pixelated/ruby/bin', bare: true)
+    Git.clone(github.com/Pixelated-Studios/Pixelated-Backup.git, path: /etc/pixelated/ruby/bin)
 
-
-    # notify the user if the repository was cloned successfully
   end
 
+  # notify the user if the repository was cloned successfully
   def gitcheck
     if Dir.exist?("/usr/local/pixelated/ruby/bin/#{$softtype}")
       puts "Successfully Cloned the Repo for #{softtype}!#{$new_line}"
