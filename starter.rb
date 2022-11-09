@@ -3,9 +3,10 @@
 
 require 'git'
 require 'ruby_figlet'
-require_relative './vars/Globalvars'
 require 'fileutils'
 require 'io/console'
+
+require_relative './vars/Globalvars'
 require_relative './classes/Gitclone'
 require_relative './classes/Makedirectories'
 require_relative './classes/Gitfetch'
