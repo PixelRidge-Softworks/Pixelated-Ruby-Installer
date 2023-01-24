@@ -25,6 +25,7 @@ puts '-' * 31
 options = {
   '1' => 'Pixelated-Backup'
 }
+
 puts "#{options.keys} : #{options.values}"
 softtype = nil
 loop do
@@ -36,20 +37,20 @@ loop do
 end
 
 puts "You selected option #{softtype}"
-$softtype = softtype
+@softtype = softtype
 
 puts "Ok! We will install #{softtype} for you!"
 puts
 
 sleep(2)
 
-Makedirectories.new
+Makedirectories.new(softtype)
 
 case $dirsreal
 when 0
   giturl = "https://github.com/Pixelated-Studios/#{softtype}.git"
   destpa = '/usr/pixelated/ruby/bin'
-  Gitclone.new(giturl, destpa)
+  Gitclone.new(giturl, destpa, softtype)
   Gitclone.clone
   Gitclone.check
 when 1
