@@ -4,6 +4,8 @@
 # start class for global vars we will need throughout the program
 class Globalvars
 
+  attr_accessor :loadingbars,:pixelated_pathname
+
   # start init method
   def initialize
     puts 'Loading global variables now!'
@@ -16,13 +18,13 @@ class Globalvars
   # initialize the loadbars global variables
   def init_loadbars
     # setting up global vars for loading bars
-    $loadingbar1 = '###          25% '
+    @loadingbar1 = '###          25% '
 
-    $loadingbar2 = '######       50% '
+    @loadingbar2 = '######       50% '
 
-    $loadingbar3 = '#########    75% '
+    @loadingbar3 = '#########    75% '
 
-    $loadingbar4 = '############ 100% '
+    @loadingbar4 = '############ 100% '
     # change the loadingbars variable to 1 for the loadbars_check
     @loadingbars = 1
   end
@@ -35,5 +37,9 @@ class Globalvars
         break
       end
     end
+  end
+
+  def pixelated_path
+    @pixelated_pathname = '/etc/Pixelated-Studios/Ruby/bin'
   end
 end
